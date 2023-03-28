@@ -1,0 +1,328 @@
+*{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Start Play */
+.start-play {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 100000;
+    background-color: rgb(126, 90, 215);
+}
+.start-play::before{
+    content: "Start Play";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+/* End Play */
+
+/* Start Container */
+.container{
+    background-color: rgb(121 69 255);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(92 45 213);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    border-top-right-radius: 80px ;
+    border-top-left-radius: 80px;
+}
+/* End Container */
+
+/* Start Head Button */
+.head-button{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 70px;
+    padding-left: 90px;
+    padding-bottom: 30px;
+    align-items: center;
+}
+.head-button button{
+    outline: 0;
+    border: 0;
+    background-color:rgb(92 45 213) ;
+    padding: 9px 17px;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.head-button .circles{
+    display: flex;
+    width: 50px;
+    flex-wrap: wrap;     
+}
+.head-button .circles span{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0px 3px 0px 0px black;
+    border: 2px solid black;
+}
+.head-button .circles span.red-circle{
+    background-color: rgb(255 100 135);
+}
+.head-button .circles span.yellow-circle{
+    background-color:rgb(254 206 105) ;
+}
+/* End Head Button */
+
+/* Start Body Game */
+.body-game{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Start Card */
+.body-game .card-results-player-one,
+.body-game .card-results-player-two{
+    width: 140px;
+    display: block;
+    height: 150px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0px 6px 0px 0px black;
+    position: relative;
+}
+.body-game .card-results-player-one .icon,
+.body-game .card-results-player-two .icon{
+    margin-bottom: 50px;
+}
+.body-game .card-results-player-one .icon div,
+.body-game .card-results-player-two .icon div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid black;
+    box-shadow: 0px 3px 0px 0px black;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.body-game .card-results-player-one .icon div{
+    background-color: rgb(255 100 135);
+}
+.body-game .card-results-player-two .icon div{
+    background-color: rgb(254 206 105);
+}
+.body-game .card-results-player-one .icon div .eye,
+.body-game .card-results-player-two .icon div .eye{
+    display: flex;
+}
+.body-game .card-results-player-one .icon div .eye{
+    position: absolute;
+    left: 18px;
+    top: 7px;
+}
+.body-game .card-results-player-two .icon div .eye{
+    position: absolute;
+    left: 10px;
+    top: 7px;
+}
+.body-game .card-results-player-one .icon div .eye span,
+.body-game .card-results-player-two .icon div .eye span{
+    background-color: black;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+}
+.body-game .card-results-player-one .icon div .eye .left{
+    margin-right: 5px;
+}
+.body-game .card-results-player-two .icon div .eye .right{
+    margin-left: 5px;
+}
+.body-game .card-results-player-one .icon .smile-mouth {
+    display: block;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    border-color: transparent black black transparent;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+}
+.body-game .card-results-player-two .icon .smile-mouth {
+    display: block;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    border-color: transparent black black transparent;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top: 8px;
+}
+.body-game .card-results-player-one h3,
+.body-game .card-results-player-two h3{
+    font-size: 16px;
+    margin-bottom: -5px;
+}
+.body-game .card-results-player-one span,
+.body-game .card-results-player-two span{
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+}
+/* End Card */
+
+/* Start Connect Four Game */
+.connect-four-game{
+    background-color: white;
+    width: 575px;
+    height: 480px;
+    position: relative;
+    z-index: 100;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 30px;
+    border: 3px solid black;
+    box-shadow: 0px 6px 0px 0px black;
+    padding: 10px;
+}
+.connect-four-game .connect{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: calc(100%);
+    cursor: pointer;
+}
+.connect-four-game .connect div{
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color: rgb(121 69 255);
+    box-shadow: 0px 9px 0px 0px inset black;
+    transition: 0.3s;
+}
+.connect-four-game .connect div.red{
+    box-shadow: 0px 4px 0px 0px inset rgba(0, 0, 0, 0.4);
+    background-color: rgb(255 100 135);
+}
+.connect-four-game .connect div.yellow{
+    box-shadow: 0px 4px 0px 0px inset rgba(0, 0, 0, 0.4);
+    background-color:rgb(254 206 105) ;
+    
+}
+/* End Connect Four Game */
+
+/* End Body Game */
+/* Start p */
+.container p{
+    position: relative;
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+    color: white;
+}
+/* End p */
+
+/* Start Footer Timer */
+/* .footer-timer{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    padding: 10px;
+    background-color: rgb(255 100 135);
+    border-radius: 5px;
+    border: 3px solid black;
+}
+.footer-timer::before{
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    width: 100px;
+    height: 50px;
+    bottom: 70px;
+    left: 0;
+    border-color:blue red  rgb(255 100 135) black;
+    border-style: solid;
+    border-width: 50px;
+} */
+/* clip-path: polygon(50% 80%, 0% 100%, 100% 100%); */
+/* End Footer Timer */
+
+/* Start Close div */
+.close{
+    cursor:not-allowed;
+}
+/* End Close div */
+
+/* Start Winner */
+.winner{
+    background-color: rgb(126 90 215);
+    position: absolute ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    font-weight: bold;
+    color: white;
+    
+}
+.winner div{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+.winner button{
+    outline: 0;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:white;
+    border-radius: 6px;
+}
+/* End Winner */

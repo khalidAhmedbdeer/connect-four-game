@@ -1,0 +1,37 @@
+Html
+----------
+1 - build button Start Play
+1 - container the Perant to project  
+2 - Create Bufour Container With Css  
+3 - build a Connect Four Game
+4 - Create a Card Results and Number of wins 
+5 - Create a button menu and restart 
+6 - no now (Create a Card Time Of Player in Game) 
+7 - no now (Win)
+----------
+
+Css
+----------
+1 - container , color:rgb(121 69 255)
+2 - container Befour and button menu and restart , color:rgb(92 45 213)
+3 - Card Results and Number of wins icon , color:rgb(254 206 105) = yellow , rgb(255 100 135) = red
+4 - no now (Card Time Of Player in Game , color:rgb(253 102 135))
+----------
+
+Java-Script
+----------
+1 - click start play
+2 - The player's turn in the game
+3 - click the div to be red Or yellow حسب الدور
+4 - div is clicked is not allow
+5 - logic how to win 
+----------
+
+
+- logic how to win  Long Long logic
+1- Create Array Name Is winningArrays فيها كل الاحتمالات للفوز 
+2- Create Function Win
+3- For loop To Array 
+4- Create 4 variables and Add The connectFourGameDivs[Array[i][0-3]] => <div id="1-42" class="red-yellow"></div> 
+5- if 4 variable is Class Red , Is Win
+5- if 4 variable is Class Yellow , Is Win
